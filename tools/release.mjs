@@ -9,6 +9,9 @@ const root=path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const project='driving-xsam-preview';
 const expected=['index.html','README.md','LINKEDIN.md','media/README.md','media/showcase-montage.mp4','media/contact-sheet.jpg'];
 expected.sort();
+const legacyExpected=[...expected];
+for(let n=1;n<=5;n++)for(const ext of ['mp4','jpg'])legacyExpected.push('media/case-0'+n+'.'+ext);
+legacyExpected.sort();
 const manifest=JSON.parse(fs.readFileSync(path.join(root,'release-manifest.json'),'utf8'));
 const site=path.join(root,'site');
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
@@ -112,7 +115,8 @@ function prepareRestore(deployment,dir){
  };
  const locked=JSON.parse(show('release-manifest.json').toString());
  assert(locked.schema==='static-showcase-v1'&&locked.project===project,'Previous package identity mismatch');
- assert(JSON.stringify(locked.files.map(f=>f.path).sort())===JSON.stringify(expected),'Previous package allowlist mismatch');
+ const previousPaths=JSON.stringify(locked.files.map(f=>f.path).sort());
+ assert([expected,legacyExpected].some(list=>previousPaths===JSON.stringify(list)),'Previous package allowlist mismatch');
  const previousSite=path.join(dir,'restore-site');
  for(const file of locked.files){
   const bytes=show('site/'+file.path);
