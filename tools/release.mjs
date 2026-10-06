@@ -88,6 +88,19 @@ async function readback(url,dir,locked=manifest,localSite=site){
  }
  return {files,nativeRangeSupported:range.status===206,rangeResponseStatus:range.status,rangeResponseBytesVerified:true};
 }
+async function readbackAfterAliasConvergence(url,dir,locked=manifest,localSite=site){
+ const failures=[];
+ for(let attempt=1;attempt<=12;attempt++){
+  try {
+   const verified=await readback(url,path.join(dir,'attempt-'+attempt),locked,localSite);
+   return {...verified,convergenceAttempts:attempt,priorFailures:failures};
+  } catch(error) {
+   failures.push({attempt,at:new Date().toISOString(),error:String(error)});
+   if(attempt===12)throw new Error('Pages production alias did not converge after 12 recorded attempts',{cause:error});
+   await new Promise(resolve=>setTimeout(resolve,2500));
+  }
+ }
+}
 function prepareRestore(deployment,dir){
  const source=deployment.Source;
  assert(/^[a-f0-9]{7,40}$/.test(source||''),'Previous production commit is unknown');
@@ -113,7 +126,7 @@ function prepareRestore(deployment,dir){
 async function restore(previous,env,dir){
  const output=run(['pages','deploy',previous.site,'--project-name',project,'--branch','main','--commit-hash',previous.commit,'--commit-dirty=false'],{capture:true,env});
  fs.writeFileSync(path.join(dir,'restore.log'),output,{mode:0o600});
- const verified=await readback('https://'+project+'.pages.dev',path.join(dir,'restored'),previous.manifest,previous.site);
+ const verified=await readbackAfterAliasConvergence('https://'+project+'.pages.dev',path.join(dir,'restored'),previous.manifest,previous.site);
  return {previousCommit:previous.commit,previousDeploymentId:previous.deploymentId,restoredBytesVerified:verified.files.length};
 }
 
@@ -168,7 +181,7 @@ try{
   save(dir,receipt);
   try{
    receipt.deploymentReadback=await readback(receipt.url,dir);
-   if(production)receipt.productionReadback=await readback('https://'+project+'.pages.dev',path.join(dir,'production'));
+   if(production)receipt.productionReadback=await readbackAfterAliasConvergence('https://'+project+'.pages.dev',path.join(dir,'production'));
   }catch(error){
    if(previous)receipt.rollback=await restore(previous,env,dir);
    throw error;
