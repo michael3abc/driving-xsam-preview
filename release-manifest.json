@@ -13,68 +13,18 @@
     },
     {
       "path": "README.md",
-      "bytes": 4166,
-      "sha256": "df08d346fc9719badd40fa314eae07a4f586bda4c76f542c76bddb1c6f216d6e"
+      "bytes": 4358,
+      "sha256": "2dca50b56b907593b1381370842166b65fa92f4cbfe6aef0843ec679b180ecc2"
     },
     {
       "path": "index.html",
-      "bytes": 2010614,
-      "sha256": "a03293180711364e37c4bd2fefe00f359ecb5905f2d33158347c4c864c0c42ef"
+      "bytes": 2015601,
+      "sha256": "5f1684864c02a14959e06bc07e027bdc456392b382856c11ca38e006ef16baa4"
     },
     {
       "path": "media/README.md",
-      "bytes": 984,
-      "sha256": "c591292b4fbcb189904094f4e139faf3f811014636a4bc0a4f9c1e5609ce1912"
-    },
-    {
-      "path": "media/case-01.jpg",
-      "bytes": 221729,
-      "sha256": "fdc9d7414c64a32cae633416c16e2d3817ab4f1045cb99a7945569849475c7ea"
-    },
-    {
-      "path": "media/case-01.mp4",
-      "bytes": 835707,
-      "sha256": "b3908b02a40d1fd6c4d506ef2eabd6b48507d2e2d9705c2fbe4aafa231740f81"
-    },
-    {
-      "path": "media/case-02.jpg",
-      "bytes": 226553,
-      "sha256": "2b7855dae87ccf42e316fceca7e0e1ba2eaca744a2df9c48c657fe44c2f37371"
-    },
-    {
-      "path": "media/case-02.mp4",
-      "bytes": 227174,
-      "sha256": "6a2868332013cbb56f606e56c4a3d4a5ce64d5d14de41d94c77ef888974e78a3"
-    },
-    {
-      "path": "media/case-03.jpg",
-      "bytes": 182293,
-      "sha256": "640669fdcd9ddfa388a005e6857254c20e85fa6b3a337c8265ab3493455e67e3"
-    },
-    {
-      "path": "media/case-03.mp4",
-      "bytes": 558177,
-      "sha256": "e798117ded8dfdabbd566ad101eb617e2539255b55a837fb1ecb1bf059044664"
-    },
-    {
-      "path": "media/case-04.jpg",
-      "bytes": 215790,
-      "sha256": "547f774262d4e2cd49e39ffee2afece342b5acab008780f47991d01d83ad2176"
-    },
-    {
-      "path": "media/case-04.mp4",
-      "bytes": 669637,
-      "sha256": "6a105f75309c621c0ce1e12d4c967874fb2df95dd488c56942c5694cb529984e"
-    },
-    {
-      "path": "media/case-05.jpg",
-      "bytes": 273822,
-      "sha256": "b9e9633712f20cb1855a12074b7dec4ad00fa0c053b4df29d2a217c2aa7477d4"
-    },
-    {
-      "path": "media/case-05.mp4",
-      "bytes": 924862,
-      "sha256": "519672d9796385df1246939796a35551f1e80301a9fea9425d7567168ab25343"
+      "bytes": 992,
+      "sha256": "7229bfbaf2414ce984f62b18b88ec14df241896bd64d1df639bdf39259c03f8f"
     },
     {
       "path": "media/contact-sheet.jpg",

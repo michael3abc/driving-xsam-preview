@@ -8,7 +8,6 @@ import {spawnSync} from 'node:child_process';
 const root=path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const project='driving-xsam-preview';
 const expected=['index.html','README.md','LINKEDIN.md','media/README.md','media/showcase-montage.mp4','media/contact-sheet.jpg'];
-for(let n=1;n<=5;n++)for(const ext of ['mp4','jpg'])expected.push('media/case-0'+n+'.'+ext);
 expected.sort();
 const manifest=JSON.parse(fs.readFileSync(path.join(root,'release-manifest.json'),'utf8'));
 const site=path.join(root,'site');
@@ -33,7 +32,7 @@ function verify(){
   const bytes=fs.readFileSync(path.join(site,file.path));
   assert(bytes.length===file.bytes&&sha(bytes)===file.sha256,'Changed package file: '+file.path);
  }
- console.log('Verified 16 approved static files and all locked sizes/SHA256 values.');
+ console.log('Verified 6 approved static files and all locked sizes/SHA256 values.');
 }
 const [command,...flags]=process.argv.slice(2);
 function option(name){const i=flags.indexOf('--'+name);return i<0?undefined:flags[i+1];}
@@ -163,7 +162,7 @@ try{
    const browser=JSON.parse(fs.readFileSync(option('browser-receipt'),'utf8'));
    assert(browser.label==='deployed-preview'&&browser.htmlSha256===manifest.files.find(f=>f.path==='index.html').sha256,'Wrong preview browser evidence');
    assert(browser.staticViewerActionsAbsent&&!browser.errors.length&&!browser.externalRequests.length&&!browser.backendRequests.length,'Preview browser gate failed');
-   assert(browser.mediaPlayback.length===6&&browser.offlineMediaPlayback.length===6&&browser.caseJumps.length===5&&browser.montageSeeks.length===13&&browser.ended.id==='case-05'&&browser.replay,'Preview media gate incomplete');
+   assert(browser.mediaPlayback.length===1&&browser.offlineMediaPlayback.length===1&&browser.caseJumps.length===5&&browser.montageSeeks.length===13&&browser.ended.id==='case-05'&&browser.replay,'Preview media gate incomplete');
    receipt.previewBrowserReceiptSha256=sha(fs.readFileSync(option('browser-receipt')));
   }
   const before=jsonOutput(run(['pages','deployment','list','--project-name',project,'--environment','production','--json'],{capture:true,env}));
