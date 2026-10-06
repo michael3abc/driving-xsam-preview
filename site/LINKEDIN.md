@@ -20,7 +20,7 @@ How can a model explain a potentially risky driving situation and show which obj
 
 That question is the focus of my ongoing master's research. My implementation work connects data validation, model-training workflows, recovery, and offline evaluation. The research preview makes the predictions and their limitations inspectable while keeping the unpublished core method private.
 
-The preview pairs five hand-selected offline predictions with dataset annotations, including differences in suggested actions, descriptions and the selected risk object. The evaluation distinguishes paper-reported values from locally measured results, gives a 12-row representative comparison and complete sourced appendix, and separates benchmark protocols. Cross-run selection used test scores, so the selected results are not presented as an unbiased held-out estimate. There is no claim of real-time operation or deployment readiness.
+The preview pairs five hand-selected offline predictions with dataset annotations, including differences in suggested actions, descriptions and the selected risk object. The evaluation distinguishes paper-reported values from locally measured results in three focused tables: DRAMA-original, DRAMA-ROLISP and an internal bounding-box localization diagnostic. Cross-run selection used test scores, so the selected results are not presented as an unbiased held-out estimate. There is no claim of real-time operation or deployment readiness.
 
 I'm interested in opportunities in computer vision, multimodal learning, and research engineering.
 
