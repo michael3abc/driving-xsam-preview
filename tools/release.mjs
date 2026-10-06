@@ -155,9 +155,9 @@ try{
   const output=run(['pages','deploy',site,'--project-name',project,'--branch',branch,'--commit-hash',receipt.commit,'--commit-dirty=false'],{capture:true,env});
   fs.writeFileSync(path.join(dir,'upload.log'),output,{mode:0o600});
   const urls=output.match(/https:\/\/[a-z0-9-]+\.driving-xsam-preview\.pages\.dev/g)||[];
-  assert(urls.length,'Deployment URL was not returned');receipt.url=urls.at(-1);
+  assert(urls.length,'Deployment URL was not returned');receipt.url=urls[0];
   const after=jsonOutput(run(['pages','deployment','list','--project-name',project,'--environment',receipt.environment,'--json'],{capture:true,env}));
-  receipt.deployment=after.find(d=>d.Deployment===receipt.url)||after[0];
+  receipt.deployment=after.find(d=>d.Deployment===receipt.url);
   assert(receipt.deployment,'Deployment identity missing');
   save(dir,receipt);
   try{
