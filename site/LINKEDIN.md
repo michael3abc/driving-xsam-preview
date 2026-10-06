@@ -1,6 +1,6 @@
 # LinkedIn drafts
 
-Draft only; this task does not post to LinkedIn. Five real examples and a 40-second montage have user-confirmed display permissions and publication approval. Add the verified live showcase URL only after deployment succeeds.
+Draft only; this task does not post to LinkedIn. Five real examples and a 40-second montage have user-confirmed display permissions and publication approval. The live showcase has passed deployed file-hash and browser playback checks.
 
 ## Project entry
 
@@ -12,7 +12,7 @@ Ongoing master's research on understanding potential risks in short driving vide
 
 **Skills:** Computer Vision · Multimodal Machine Learning · Video Understanding · Python · Model Evaluation
 
-**Link:** Add the approved showcase URL only after a separate publication step. No public URL exists for this draft.
+**Link:** https://driving-xsam-preview.pages.dev/
 
 ## Post draft — recommended, no headline score
 
@@ -23,6 +23,8 @@ That question is the focus of my ongoing master's research. My implementation wo
 The preview pairs five hand-selected offline predictions with dataset annotations, including differences in suggested actions, descriptions and the selected risk object. The evaluation distinguishes paper-reported values from locally measured results, gives a 12-row representative comparison and complete sourced appendix, and separates benchmark protocols. Cross-run selection used test scores, so the selected results are not presented as an unbiased held-out estimate. There is no claim of real-time operation or deployment readiness.
 
 I'm interested in opportunities in computer vision, multimodal learning, and research engineering.
+
+Research preview: https://driving-xsam-preview.pages.dev/
 
 #ComputerVision #MultimodalAI #ResearchEngineering
 
