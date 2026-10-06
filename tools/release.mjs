@@ -77,10 +77,16 @@ async function readback(url,dir,locked=manifest,localSite=site){
  }
  const media=locked.files.find(f=>f.path==='media/showcase-montage.mp4');
  const range=await fetch(new URL('/'+media.path,origin),{headers:{Range:'bytes=0-0'},redirect:'manual',signal:AbortSignal.timeout(45000)});
- assert(range.status===206&&range.headers.get('content-range')==='bytes 0-0/'+media.bytes,'Published MP4 Range contract failed');
  const first=Buffer.from(await range.arrayBuffer());
- assert(first.length===1&&first[0]===fs.readFileSync(path.join(localSite,media.path))[0],'Range first byte mismatch');
- return {files,rangeVerified:true};
+ if(range.status===206){
+  assert(range.headers.get('content-range')==='bytes 0-0/'+media.bytes,'Unexpected partial-content range');
+  assert(first.length===1&&first[0]===fs.readFileSync(path.join(localSite,media.path))[0],'Range first byte mismatch');
+ }else{
+  // The authored viewer explicitly seeks a fetched Blob; native HTTP Range is not required.
+  // Record the server limitation rather than claiming native Range support.
+  assert(range.status===200&&first.length===media.bytes&&sha(first)===media.sha256,'Invalid full-response Range behavior');
+ }
+ return {files,nativeRangeSupported:range.status===206,rangeResponseStatus:range.status,rangeResponseBytesVerified:true};
 }
 function prepareRestore(deployment,dir){
  const source=deployment.Source;
