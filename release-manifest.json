@@ -1,0 +1,90 @@
+{
+  "schema": "static-showcase-v1",
+  "project": "driving-xsam-preview",
+  "appId": "report:e55976ee-b743-42a2-9677-189b66f06e86",
+  "productionBranch": "main",
+  "deploymentMode": "Direct Upload",
+  "wranglerVersion": "4.147.0",
+  "files": [
+    {
+      "path": "LINKEDIN.md",
+      "bytes": 2604,
+      "sha256": "959a360971799f9c871acadfa635c13f7e31ed1a500959def6de2e87fd6e6f0c"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4185,
+      "sha256": "7201d94ed0e824986e5f93608b8c55c4a0b824c95766d08a2accedd2d09911e2"
+    },
+    {
+      "path": "index.html",
+      "bytes": 2033388,
+      "sha256": "59a01f999a70e34af386f2cca06db7ea04dd5d283b2334fce5980cc73faab0c3"
+    },
+    {
+      "path": "media/README.md",
+      "bytes": 984,
+      "sha256": "c591292b4fbcb189904094f4e139faf3f811014636a4bc0a4f9c1e5609ce1912"
+    },
+    {
+      "path": "media/case-01.jpg",
+      "bytes": 221729,
+      "sha256": "fdc9d7414c64a32cae633416c16e2d3817ab4f1045cb99a7945569849475c7ea"
+    },
+    {
+      "path": "media/case-01.mp4",
+      "bytes": 835707,
+      "sha256": "b3908b02a40d1fd6c4d506ef2eabd6b48507d2e2d9705c2fbe4aafa231740f81"
+    },
+    {
+      "path": "media/case-02.jpg",
+      "bytes": 226553,
+      "sha256": "2b7855dae87ccf42e316fceca7e0e1ba2eaca744a2df9c48c657fe44c2f37371"
+    },
+    {
+      "path": "media/case-02.mp4",
+      "bytes": 227174,
+      "sha256": "6a2868332013cbb56f606e56c4a3d4a5ce64d5d14de41d94c77ef888974e78a3"
+    },
+    {
+      "path": "media/case-03.jpg",
+      "bytes": 182293,
+      "sha256": "640669fdcd9ddfa388a005e6857254c20e85fa6b3a337c8265ab3493455e67e3"
+    },
+    {
+      "path": "media/case-03.mp4",
+      "bytes": 558177,
+      "sha256": "e798117ded8dfdabbd566ad101eb617e2539255b55a837fb1ecb1bf059044664"
+    },
+    {
+      "path": "media/case-04.jpg",
+      "bytes": 215790,
+      "sha256": "547f774262d4e2cd49e39ffee2afece342b5acab008780f47991d01d83ad2176"
+    },
+    {
+      "path": "media/case-04.mp4",
+      "bytes": 669637,
+      "sha256": "6a105f75309c621c0ce1e12d4c967874fb2df95dd488c56942c5694cb529984e"
+    },
+    {
+      "path": "media/case-05.jpg",
+      "bytes": 273822,
+      "sha256": "b9e9633712f20cb1855a12074b7dec4ad00fa0c053b4df29d2a217c2aa7477d4"
+    },
+    {
+      "path": "media/case-05.mp4",
+      "bytes": 924862,
+      "sha256": "519672d9796385df1246939796a35551f1e80301a9fea9425d7567168ab25343"
+    },
+    {
+      "path": "media/contact-sheet.jpg",
+      "bytes": 309928,
+      "sha256": "a976d7e979cbd2a43b36869f9277a7f81bd0cdad59637bc41dc3272777ea062f"
+    },
+    {
+      "path": "media/showcase-montage.mp4",
+      "bytes": 11950821,
+      "sha256": "faa4a18010e9277fffb35f99c7c265d4d009f73fa3315e1d81e13416a212362c"
+    }
+  ]
+}
