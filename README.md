@@ -2,7 +2,7 @@
 
 **Live research preview:** https://driving-xsam-preview.michael3abc.chatgpt.site/
 
-Publication repository for the approved static research showcase of my M.S. thesis: a video VLM that describes potential risks in short driving videos and localizes the referenced object. The package in `site/` is the earlier Cloudflare Pages version (https://driving-xsam-preview.pages.dev/).
+Publication repository for the approved static research showcase of my M.S. thesis: a video VLM that describes potential risks in short driving videos and localizes the referenced object. The package in `site/` is the Cloudflare Pages deployment of the showcase (https://driving-xsam-preview.pages.dev/).
 The public webpage and media are downloadable.
 No core research source, history, configurations, weights, raw predictions, source cache or rights evidence belongs here.
 No blanket MIT or dataset-media reuse license is granted.
