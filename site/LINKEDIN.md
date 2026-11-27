@@ -1,5 +1,7 @@
 # LinkedIn drafts
 
+> **Historical 2026-09 draft. Superseded; do not reuse.** The score and link below belong to the September 2026 snapshot. Current wording (2026-11): “CIDEr 3.95 on the DRAMA test set, 2nd of 9 listed methods that report CIDEr (protocols differ).” Current results and sources: https://portfolio.yoyoserver.com/work/driving-xsam/
+
 Draft only; this task does not post to LinkedIn. Five real examples and a 40-second montage have user-confirmed display permissions and publication approval. The live showcase has passed deployed file-hash and browser playback checks.
 
 ## Project entry
@@ -28,7 +30,7 @@ Research preview: https://driving-xsam-preview.pages.dev/
 
 #ComputerVision #MultimodalAI #ResearchEngineering
 
-## Optional technical sentence
+## Optional technical sentence (2026-09 snapshot, superseded)
 
 “The selected checkpoint records CIDEr 3.987 on a DRAMA-original public-reference test evaluation; cross-run test-based selection and cross-paper protocol differences limit what that number establishes.”
 

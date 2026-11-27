@@ -1,5 +1,7 @@
 # Driving Scene Risk Understanding — Research Preview
 
+> **Historical snapshot, 2026-09. Superseded; do not cite the numbers below.** This file describes the September 2026 preview package as released. Its scores come from an earlier checkpoint and evaluation setup, and its 12-row comparison is out of date. Current result (2026-11): CIDEr 3.95 on the DRAMA test set, second-highest among the 9 listed methods that report CIDEr (protocols differ). Current results and sources: https://github.com/michael3abc/driving-xsam-preview#readme and https://portfolio.yoyoserver.com/work/driving-xsam/
+
 Unpublished master's research on describing potential risks in short driving videos and locating the relevant object. This is an offline research preview, not a deployed driving assistant or a peer-reviewed performance claim.
 
 **Research showcase — display permissions and publication approval are user-confirmed.**
@@ -16,7 +18,7 @@ Then open http://127.0.0.1:4179/. No server-side model is included.
 
 Keep `index.html` and `media/` together. This local candidate presents five hand-selected real examples in one 40-second montage with synchronized ground-truth/prediction risk captions and driving suggestions. Each two-second clip repeats four times in the montage. Five jump buttons and a concise case guide provide navigation without adding five duplicate players. These are offline predictions, not an overall success rate. Dataset annotations are reference text, not verified driving advice. Display permissions and publication approval are user-confirmed; imagery is retained without additional blurring after frame review. No independent legal verification or blanket media-reuse license is claimed.
 
-## Selected measurements
+## Selected measurements (2026-09 snapshot, superseded)
 
 One validation-selected checkpoint is used throughout; saved predictions were rescored without retraining or new model inference.
 
